@@ -1,1 +1,1 @@
-CbMobile::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
+BuzzbeeSpeedAPI::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
