@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   def show
-    render_output({:id => params['id']})
+    test = Product.find(params[:id])
+    render_output(test)
   end
 
   def index
@@ -10,7 +11,9 @@ class ProductsController < ApplicationController
   end
 
   def create
-    render_output({:hello => 'world'})
+    product = request.params[:product]
+    product = Product.create product
+    render_output(product)
   end
 
   private
