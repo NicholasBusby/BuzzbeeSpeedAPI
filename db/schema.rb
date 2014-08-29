@@ -11,16 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140815234707) do
+ActiveRecord::Schema.define(version: 20140822154407) do
 
   create_table "products", force: true do |t|
-    t.text     "manufacture"
-    t.decimal  "price",       precision: 10, scale: 0
-    t.decimal  "cost",        precision: 10, scale: 0
-    t.decimal  "sale_price",  precision: 10, scale: 0
-    t.text     "name"
+    t.string   "name",                                 null: false
+    t.integer  "companyId",                            null: false
+    t.decimal  "price",       precision: 10, scale: 0, null: false
+    t.decimal  "cost",        precision: 10, scale: 0, null: false
+    t.decimal  "msrp",        precision: 10, scale: 0, null: false
+    t.string   "binLocation",                          null: false
+    t.string   "status",                               null: false
+    t.text     "details",                              null: false
+    t.string   "tags",                                 null: false
+    t.integer  "quantity",                             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "products", ["id"], name: "index_products_on_id", using: :btree
+  add_index "products", ["name"], name: "index_products_on_name", using: :btree
 
 end

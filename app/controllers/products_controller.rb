@@ -1,3 +1,4 @@
+
 class ProductsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   def show
@@ -13,7 +14,7 @@ class ProductsController < ApplicationController
   def create
     product = request.params[:product]
     product = Product.create product
-    render_output(product)
+    render_output(product.id)
   end
 
   private
