@@ -2,13 +2,14 @@
 class ProductsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   def show
-    test = Product.find(params[:id])
-    render_output(test)
+    product = Product.find(params[:id])
+    render_output(product)
   end
 
   def index
-    temp = {:hello => 'world', :number => 3, :hash => {:magic => 'inside'}, :array => [1,2,3,4,5]}
-    render_output(temp)
+    product = Product.where("").order(
+        "#{params[:order_by]} #{params[:order_direction]}")
+    render_output(product)
   end
 
   def create

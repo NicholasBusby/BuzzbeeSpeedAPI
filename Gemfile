@@ -19,5 +19,7 @@ group :development, :test do
   gem 'parallel_tests'
   gem 'pry-remote', '~> 0.1'
   gem 'rspec-rails'
+  gem 'rspec-pride', '~> 2.2.0'
+  gem 'simplecov', '~> 0.8'
 end
 
