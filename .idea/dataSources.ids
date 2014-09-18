@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails BuzzbeeSpeedAPI: test" uuid="eabc71c4-b094-41cf-935c-668a8ced868d">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source source="LOCAL" name="Rails BuzzbeeSpeedAPI: production" uuid="a2e47a54-96c4-4e52-81d3-491687e1d15c">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-</component>
